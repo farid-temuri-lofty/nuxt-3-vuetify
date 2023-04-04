@@ -23,9 +23,7 @@ Vuetify in Nuxt 3 for doing amazing things.
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+So many guide on how to configure vuetify with nuxt 3, but you need to know only one module to include it
 
 ## Quick Setup
 
@@ -49,23 +47,21 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-3-vuetify'
   ],
-  vuetify: {
-    scssSettingsSrc: 'settings.scss' // file configure scss variables 
+  vuetify: { // file configure scss variables 
     // more here https://vuetifyjs.com/en/features/sass-variables/
-    vuetifyOptions: {
-      // components and directives omitted but included
+    scssSettingsSrc: 'settings.scss'
+    vuetifyOptions: { // options passed to createVuetify, // components and directives omitted but included
+     // more here https://vuetifyjs.com/en/getting-started/installation/
       blueprint: mdi3,
       defaults: {
-        global: {
-          variant: 'outlined'
-        }
+        ...
       }
-    } // more here https://vuetifyjs.com/en/getting-started/installation/
+    }
   }
 })
 ```
 
-That's it! You can now use Vuetify in nuxt 3 in your Nuxt app ✨
+That's it! You can now use Vuetify in nuxt 3 in your Nuxt app ✨ Zero build headache
 
 ## Development
 

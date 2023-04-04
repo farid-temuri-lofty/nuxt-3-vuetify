@@ -2,9 +2,22 @@
   "name": "nuxt-3-vuetify",
   "version": "1.0.0",
   "description": "Add vuetify with ease",
-  "repository": "",
+  "repository": "https://github.com/farid-temuri-lofty/nuxt-3-vuetify",
   "license": "MIT",
   "type": "module",
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "nuxt 3",
+    "vuetify3",
+    "vuetify 3",
+    "typesafe",
+    "ui lib",
+    "vue ui lib",
+    "ssr",
+    "vue",
+    "tajikistan"
+  ],
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
