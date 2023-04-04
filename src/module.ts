@@ -1,19 +1,42 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addPlugin, addTemplate } from '@nuxt/kit'
+import vuetify from 'vite-plugin-vuetify'
+import { VuetifyOptions } from 'vuetify'
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  scssSettingsSrc?: string,
+  vuetifyOptions?:VuetifyOptions
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
-    configKey: 'myModule'
+    name: 'nuxt-3-vuetify',
+    configKey: 'vuetify',
+    compatibility: {
+      nuxt: '^3.0.0',
+    }
   },
-  // Default configuration options of the Nuxt module
   defaults: {},
-  setup (options, nuxt) {
-    const resolver = createResolver(import.meta.url)
+  setup( {scssSettingsSrc, vuetifyOptions = {}}, nuxt ) {
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+
+    
+    addTemplate( {
+      filename: 'vuetify-options.mjs', getContents() {
+      return `export const vuetifyOptions = ${JSON.stringify(vuetifyOptions)}`
+    }})
+
+
+      addPlugin( resolve( './runtime/plugin' ) )
+  if ( !scssSettingsSrc ) return
+
+      nuxt.hooks.hook( 'vite:extendConfig', config => {
+        if ( !config.plugins ) return
+        config.plugins.push(
+          vuetify( {} )
+        )
+      } )
+    
+
+
   }
 })

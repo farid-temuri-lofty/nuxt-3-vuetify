@@ -1,8 +1,8 @@
 {
-  "name": "my-module",
+  "name": "nuxt-3-vuetify",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "description": "Add vuetify with ease",
+  "repository": "",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -28,7 +28,10 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.3.3"
+    "@nuxt/kit": "^3.3.3",
+    "sass": "^1.60.0",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vuetify": "^3.1.12"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
