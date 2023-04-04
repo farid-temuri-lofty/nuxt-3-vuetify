@@ -1,6 +1,8 @@
 <template>
   <div>
-    <VBtn />
+    <VBtn>
+      NIA
+    </VBtn>
   </div>
 </template>
 
