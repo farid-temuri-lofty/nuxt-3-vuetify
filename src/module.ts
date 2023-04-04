@@ -27,7 +27,7 @@ export default defineNuxtModule<ModuleOptions>({
 
 
       addPlugin( resolve( './runtime/plugin' ) )
-  if ( !scssSettingsSrc ) return
+        if ( !scssSettingsSrc ) return
 
       nuxt.hooks.hook( 'vite:extendConfig', config => {
         if ( !config.plugins ) return
