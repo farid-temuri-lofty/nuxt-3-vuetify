@@ -48,7 +48,20 @@ npm install --save-dev nuxt-3-vuetify
 export default defineNuxtConfig({
   modules: [
     'nuxt-3-vuetify'
-  ]
+  ],
+  vuetify: {
+    scssSettingsSrc: 'settings.scss' // file configure scss variables 
+    // more here https://vuetifyjs.com/en/features/sass-variables/
+    vuetifyOptions: {
+      // components and directives omitted but included
+      blueprint: mdi3,
+      defaults: {
+        global: {
+          variant: 'outlined'
+        }
+      }
+    } // more here https://vuetifyjs.com/en/getting-started/installation/
+  }
 })
 ```
 

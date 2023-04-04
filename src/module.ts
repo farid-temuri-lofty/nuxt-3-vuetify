@@ -6,7 +6,7 @@ import vuetify from 'vite-plugin-vuetify'
 const { resolve } = createResolver(import.meta.url)
 export interface ModuleOptions {
   scssSettingsSrc?: string,
-  vuetifyOptions?:VuetifyOptions
+  vuetifyOptions?: Omit<VuetifyOptions, "components"| "directives">
 }
 
 export default defineNuxtModule<ModuleOptions>({

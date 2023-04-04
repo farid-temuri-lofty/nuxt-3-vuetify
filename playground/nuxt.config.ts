@@ -8,7 +8,7 @@ export default defineNuxtConfig( {
   vuetify: {
     scssSettingsSrc: './settings.scss',
     vuetifyOptions: {
-      blueprint:md1,
+      blueprint: md1,
     } 
   }
 })
