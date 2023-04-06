@@ -63,32 +63,6 @@ export default defineNuxtConfig({
 
 That's it! You can now use Vuetify in nuxt 3 in your Nuxt app ✨ Zero build headache
 
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Generate type stubs
-npm run dev:prepare
-
-# Develop with the playground
-npm run dev
-
-# Build the playground
-npm run dev:build
-
-# Run ESLint
-npm run lint
-
-# Run Vitest
-npm run test
-npm run test:watch
-
-# Release new version
-npm run release
-```
-
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-3-vuetify/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/nuxt-3-vuetify
