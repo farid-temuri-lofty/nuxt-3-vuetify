@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/farid-temuri-lofty/nuxt-3-vuetify/compare/v1.1.0...v1.1.1)
+
+
+### 🩹 Fixes
+
+  - Plugin resolve error ([c0121fa](https://github.com/farid-temuri-lofty/nuxt-3-vuetify/commit/c0121fa))
+
+### ❤️  Contributors
+
+- Farid
+
 ## v1.1.0
 
 
